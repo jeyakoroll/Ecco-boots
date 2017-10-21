@@ -1,28 +1,28 @@
 /* --------- mixins --------- */
-@mixin opensans($style : jenya) {
+@mixin roboto($style : jenya) {
 	@if $style == jenya {
-		font-family: 'OpenSansRegular';
+		font-family: 'RobotoRegular';
 	}
 
-	@if $style == semi {
-		font-family: 'OpenSansSemiBold';
+	@if $style == light {
+		font-family: 'RobotoLight';
+	}
+
+	@if $style == medium {
+		font-family: 'RobotoMedium';
 	}
 
 	@if $style == bold {
-		font-family: 'OpenSansBold';
+		font-family: 'RobotoBold';
 	}
 
-	@if $style == ital {
-		font-family: 'OpenSansItalic';
+	@if $style == pt {
+		font-family: 'PTSerifBold';
 	}
 
-	@if $style == ruso {
-		font-family: 'RussoOneRegular';
-	}
-
-	@if $style == ubuntu {
-		font-family: 'UbuntuCondensedRegular';
-	}
+	// @if $style == ubuntu {
+	// 	font-family: 'UbuntuCondensedRegular';
+	// }
 }
 
 @mixin inlineblock ($valine: top) {
@@ -227,29 +227,26 @@ p {
 	margin: 0;
 }
 
-// base style flex
-.wrapper {
-	display: flex;
-	flex-direction: column;
+// base style 
+.main {
+	position: relative;
+	min-height: 100%;
+	height: auto !important;
 	height: 100%;
 }
 
-.content {
-	width: 1440px;
-	align-self: center;
-	display: flex;
+
+
+
+
+.empty {
+	height: 200px;
 }
-
-.main {
-	display: flex;
-  flex: 1 0 auto;
-}
-
-
 // section footer
 .footer {
+	position: relative;
 	outline: $outline;
-	flex: 0 0 auto;
-	min-height: 580px;
+	margin-top: -200px;
+	min-height: 200px;
 	background-color: #1a1a1a;
 }
