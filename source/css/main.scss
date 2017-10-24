@@ -803,9 +803,270 @@ p {
 	}
 }
 
+// gallery area
+.gallery {
+	min-height: 796px;
+	background-color: #f3f0ee;
+	padding-top: 80px;
+	position: relative;
+	@include laptop {
+		padding: 40px 0 50px;
+	}
+	@include phones {
+		min-height: auto;
+		height: auto;
+		padding: 40px 0 40px;
+	}
+}
 
+.gallery .row {
+	padding-left: 35px;
+	@include phones {
+		padding-left: 5px;
+	}
+}
 
+.gallery__title {
+	@include roboto(pt);
+	font-size: 36px;
+	text-align: center;
+	@include tablets {
+		font-size: 28px;
+	}
+	@include phones {
+		font-size: 18px;
+		margin-bottom: 15px;
+	}
+}
 
+.gallery__text {
+	@include roboto(med);
+	font-size: 18px;
+	text-align: center;
+	color: #6ea5ff;
+	margin-bottom: 70px;
+	@include laptop {
+		margin-bottom: 35px;
+	}
+	@include tablets {
+		width: 400px;
+		margin: 0 auto 35px;
+	}
+	@include phones {
+		width: 310px;
+		font-size: 16px;
+	}
+}
+
+.gallery__elem {
+	height: auto;
+	@include clearfix;
+}
+
+// gallery preview
+.gallery__prev {
+	width: 405px;
+	height: 400px;
+	float: left;
+	position: relative;
+	@include laptop {
+		float: none;
+		margin: 0 auto;
+	}
+	@include phones {
+		width: 300px;
+		height: 300px;
+	}
+}
+
+.gallery__prev-pic {
+	position: relative;
+	width: 405px;
+	height: 295px;
+	border: 1px solid #9fa9af;
+	@include phones {
+		height: 220px;
+		max-width: 300px;
+	}
+}
+
+.gallery__prev-pic_img {
+	@include absolute-center;
+	max-height: 100%;
+	max-width: 100%;
+}
+
+.gallery__prev-list {
+	@include clearfix;
+	margin-top: 21px;
+	height: 75px;
+	max-width: 100%;
+	@include laptop {
+		margin-top: 15px;
+	}
+	@include phones {
+		height: 50px;
+		width: 207px;
+		margin: 10px auto 0;
+	}
+}
+
+.gallery__prev-item {
+	width: 25%;
+	height: 100%;
+	position: relative;
+	border: 1px solid #9fa9af;
+	float: left;
+	cursor: pointer;
+}
+
+.gallery__prev-item_img {
+	@include absolute-center;
+	max-height: 100%;
+	max-width: 100%;
+}
+
+// gallery description
+.gallery__descr {
+	margin-top: -10px;
+	position: relative;
+	width: 510px;
+	height: 460px;
+	float: right;
+	margin-right: 75px;
+	@include desktop {
+		width: 450px;
+		margin-right: 15px;
+	}
+	@include laptop {
+		float: none;
+		margin: 0 auto;
+		padding-left: 20px;
+		margin-top: 16px;
+	}
+	@include tablets {
+		width: 430px;
+	}
+	@include phones {
+		height: auto;
+		width: 310px;
+		padding-left: 0;
+	}
+}
+
+.gallery__descr-list {
+
+}
+
+.gallery__descr-item_title {
+	@include roboto(bold);
+	font-size: 22px;
+	margin-bottom: 10px;
+	@include tablets {
+		font-size: 18px;
+	}
+}
+
+.gallery__descr-item {
+	font-size: 14px;
+}
+
+.gallery__descr-item_text {
+	font-size: 14px;
+	margin-top: 15px;
+	margin-bottom: 35px;
+	@include laptop {
+		margin-bottom: 20px;
+	}
+}
+
+.gallery__descr-item_price {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.old__price {
+	position: relative;
+	display: inline-block;
+	@include phones {
+		display: none;
+	}
+}
+
+.old__price-line {
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	background-color: #fd6463;
+	bottom: 40%;
+}
+
+.new__price {
+	color: #fd6463;
+	margin-left: 50px;
+	@include phones {
+		margin-left: 0;
+	}
+}
+
+.gallery__descr-item_button {
+	height: 37px;
+	font-size: 16px;
+	margin-top: 25px;
+	@include clearfix;
+	@include laptop {
+		margin-top: 15px;
+	}
+	@include phones {
+		position: relative;
+		text-align: center;
+		height: auto;
+	}
+}
+
+.gallery__descr-item_buy {
+	width: 229px;
+	display: inline-block;
+	border: 0 none;
+	background-color: #ff4343;
+	border-radius: 5px;
+	color: #fff;
+	padding: 4px 50px;
+	&:hover {
+		text-decoration: none;
+		color: #1a1a1a;
+	}
+	@include desktop {
+		padding: 4px 37px;
+		width: 200px;
+	}
+	@include phones {
+		margin-bottom: 12px;
+	}
+}
+
+.gallery__descr-item_size {
+	height: 100%;
+	display: inline-block;
+	width: 229px;
+	border: 0 none;
+	color: #1a1a1a;
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 4px 38px;
+	float: right;
+	&:hover {
+		text-decoration: none;
+		color: #1a1a1a;
+	}
+	@include desktop {
+		padding: 4px 25px;
+		width: 200px;
+	}
+	@include phones {
+		float: none;
+	}
+}
 
 
 
@@ -828,6 +1089,10 @@ p {
 	@include tablets {
 		display: none;
 	}
+}
+
+.bold {
+	font-weight: bold;
 }
 
 .br__tablets {
