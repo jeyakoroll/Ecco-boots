@@ -557,7 +557,7 @@ p {
 }
 
 .header__bottom-button_arrow {
-	background: url('../img/header-bottom-arr.png') no-repeat;
+	background: url('../img/header-bottom-arr.png') no-repeat center top/cover;
 	display: inline-block;
 	right: 65px;
 	top: 23px;
@@ -576,9 +576,11 @@ p {
 	background-color: #f3f0ee;
 	position: relative;
 	padding-top: 75px;
+	@include desktop {
+		min-height: auto;
+	}
 	@include laptop {
 		padding-top: 50px;
-		min-height: auto;
 		padding-bottom: 15px;
 	}
 	@include tablets {
@@ -594,8 +596,8 @@ p {
 }
 
 .about .row {
-	background-color: #fff;
 	@include phones {
+		background-color: #fff;
 		box-shadow: 0px 0px 13px #ddd;
 	}
 }
@@ -710,6 +712,99 @@ p {
 		margin: 10px 0;
 	}
 }
+
+// section video
+.video {
+	min-height: 782px;
+	position: relative;
+	background: url('../img/video-back.jpg') no-repeat;
+	padding-top: 48px;
+	@include desktop {
+		min-height: auto;
+		padding: 50px 0 75px;
+	}
+	@include laptop {
+		padding: 40px 0 55px;
+	}
+	@include tablets {
+		padding: 20px 0 45px;
+	}
+	@include phones {
+		padding: 33px 0 35px;
+	}
+}
+
+.video__title {
+	font-size: 36px;
+	@include roboto(pt);
+	color: #fff;
+	text-align: center;
+	margin-bottom: 10px;
+	@include tablets {
+		font-size: 28px;
+	}
+	@include phones {
+		font-size: 18px;
+		width: 270px;
+		margin: 0 auto 55px;
+	}
+}
+
+.video__text {
+	font-size: 18px;
+	@include roboto(med);
+	color: #fff;
+	text-align: center;
+	margin-bottom: 57px;
+	@include laptop {
+		margin-bottom: 35px;
+	}
+	@include phones {
+		display: none;
+	}
+}
+
+.video__movie {
+	margin: 0 auto;
+	width: 615px;
+	height: 370px;
+	border: 2px solid #252526;
+	background-color: rgba(#000, .5);
+	margin-bottom: 18px;
+	@include tablets {
+		width: 440px;
+		height: 280px;
+	}
+	@include phones {
+		width: 305px;
+		height: 185px;
+		margin-bottom: 40px;
+	}
+	@include main(380px) {
+		width: 250px;
+		height: 125px;
+	}
+}
+
+.video__catalog {
+	width: 325px;
+	height: 54px;
+	margin: 0 auto;
+	& button {
+		margin-top: 0;
+		@include phones {
+			margin-left: 0;
+			margin-bottom: 0;
+		}
+	}
+	@include phones {
+		width: 185px;
+		height: 35px;
+	}
+}
+
+
+
 
 
 
