@@ -16,6 +16,10 @@
 		font-family: 'RobotoBold';
 	}
 
+	@if $style == boldItal {
+		font-family: 'RobotoBoldItalic';
+	}
+
 	@if $style == pt {
 		font-family: 'PTSerifBold';
 	}
@@ -1031,6 +1035,7 @@ p {
 	background-color: #ff4343;
 	border-radius: 5px;
 	color: #fff;
+	height: 100%;
 	padding: 4px 50px;
 	&:hover {
 		text-decoration: none;
@@ -1042,6 +1047,7 @@ p {
 	}
 	@include phones {
 		margin-bottom: 12px;
+		height: 37px;
 	}
 }
 
@@ -1065,22 +1071,214 @@ p {
 	}
 	@include phones {
 		float: none;
+		height: 37px;
 	}
+}
+
+// work area
+.work {
+	min-height: 575px;
+	background: url('../img/relations-back.jpg') no-repeat center top/cover;
+	padding-top: 80px;
+	@include laptop {
+		padding: 60px 0 65px;
+		min-height: auto;
+	}
+	@include phones {
+		padding: 42px 0 55px;
+		background: url('../img/03.jpg') no-repeat center top/cover;
+	}
+}
+
+.work__title {
+	@include roboto(pt);
+	font-size: 36px;
+	color: #fdfdfd;
+	text-align: center;
+	margin-bottom: 5px;
+	@include laptop {
+		font-size: 28px;
+	}
+	@include phones {
+		font-size: 18px;
+		margin-bottom: 18px;
+	}
+}
+
+.work__text-top {
+	@include roboto(med);
+	font-size: 18px;
+	color: #fdfdfd;
+	text-align: center;
+	width: 715px;
+	margin: 0 auto;
+	margin-bottom: 70px;
+	@include laptop {
+		width: auto;
+		font-size: 16px;
+		margin-bottom: 60px;
+	}
+	@include tablets {
+		margin-bottom: 40px;
+		width: 90%;
+	}
+	@include phones {
+		margin-bottom: 28px;
+		max-width: 360px;
+	}
+	@include small_phones {
+		font-size: 14px;
+	}
+}
+
+.work__list {
+	@include clearfix;
+	max-width: 890px;
+	margin: 0 auto 55px;
+	@include laptop {
+		margin-bottom: 10px;
+	}
+	@include tablets {
+		width: 90%;
+	}
+}
+
+.work__item {
+	float: left;
+	width: 25%;
+	text-align: center;
+	position: relative;
+	@include tablets {
+		padding: 5px;
+	}
+	@include phones {
+		width: 50%;
+		margin-bottom: 15px;
+	}
+}
+
+.work__item-line {
+	height: 1px;
+	width: 100%;
+	background-color: #4b576b;
+	position: absolute;
+	bottom: 35%;
+	@include tablets {
+		display: none;
+	}
+}
+
+.work__item-circle {
+	background-color: #a9caff;
+	height: 10px;
+	width: 10px;
+	border-radius: 100%;
+	position: absolute;
+	left: 48%;
+	bottom: 31%;
+	@include tablets {
+		display: none;
+	}
+}
+
+.work__item-check {
+	margin-bottom: 7px;
+	@include tablets {
+		margin-bottom: 12px;
+	}
+}
+
+.work__item-text {
+	color: #fdfdfd;
+	font-size: 14px;
+	text-align: center;
+	line-height: 45px;
+	@include laptop {
+		font-size: 15px;
+	}
+	@include tablets {
+		.br {
+			display: block;
+		}
+		line-height: 16px;
+	}
+}
+
+.work__text-bottom {
+	font-size: 16px;
+	color: #86b4ff;
+	width: 605px;
+	@include roboto(boldItal);
+	margin: 0 auto;
+	text-align: center;
+	@include tablets {
+		width: 80%;
+	}
+	@include phones {
+		max-width: 330px;
+	}
+	@include small_phones {
+		font-size: 14px;
+	}
+}
+
+// reviews area
+.reviews {
+	min-height: 630px;
+	background: url('../img/reviews-back.jpg') no-repeat center top/cover;
+}
+
+
+
+// reminder area
+.reminder {
+	min-height: 680px;
+	background: url('../img/reminder-back.jpg') no-repeat center top/cover;
 }
 
 
 
 
 .empty {
-	height: 200px;
+	height: 60px;
 }
 // section footer
 .footer {
 	position: relative;
-	outline: $outline;
-	margin-top: -200px;
-	min-height: 200px;
-	background-color: #1a1a1a;
+	margin-top: -60px;
+	min-height: 60px;
+	background-color: #f3f0ee;
+	font-size: 14px;
+	color: #101010;
+	@include clearfix;
+}
+
+.footer .row {
+	padding: 18px 170px;
+	@include laptop {
+		padding: 18px 10px;
+	}
+	@include tablets {
+		text-align: center;
+	}
+}
+
+.footer__conf {
+	float: left;
+	color: #101010;
+	&:hover {
+			text-decoration: none;
+	}
+	@include tablets {
+		float: none;
+	}
+}
+
+.footer__copy {
+	float: right;
+	@include tablets {
+		float: none;
+	}
 }
 
 // style for responsive

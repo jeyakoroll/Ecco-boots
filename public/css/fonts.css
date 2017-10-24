@@ -39,6 +39,14 @@
 	}
 
 	@font-face {
+			font-family: "RobotoBoldItalic";
+			src:url("../fonts/RobotoBoldItalic/RobotoBoldItalic.woff") format("woff"),
+			url("../fonts/RobotoBoldItalic/RobotoBoldItalic.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+	}
+
+	@font-face {
 			font-family: "PTSerifBold";
 			src: url("../fonts/PTSerifBold/PTSerifBold.eot");
 			src: url("../fonts/PTSerifBold/PTSerifBold.eot?#iefix")format("embedded-opentype"),
