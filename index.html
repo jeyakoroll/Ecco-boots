@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="public/css/fonts.css">
 	<link rel="stylesheet" href="public/css/bootstrap.min.css">
 	<link rel="stylesheet" href="public/css/owl.carousel.min.css">
-	<!-- <link rel="stylesheet" href="public/css/owl.theme.default.min.css"> -->
+	<link rel="stylesheet" href="public/css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="public/css/all.min.css">
 </head>
 <body class="body">
@@ -83,7 +83,7 @@
 									  </ul>
 									</div>
 								</div><!-- wrap for counter -->
-								<button class="header__bottom-button" type="submit">
+								<button class="header__bottom-button" data-gallery="gallery" type="submit">
 									<span class="header__bottom-button_text">Перейти к товару</span>
 									<span class="header__bottom-button_arrow"></span>
 								</button>
@@ -152,7 +152,7 @@
 					<!-- 	<iframe width="560" height="315" src="https://www.youtube.com/embed/-La6m3nzJAs?rel=0&amp;controls=0" frameborder="0" allowfullscreen></iframe> -->
 					</div>
 					<div class="video__catalog">
-						<button class="header__bottom-button" type="submit">
+						<button class="header__bottom-button" data-gallery="gallery" type="submit">
 							<span class="header__bottom-button_text">Перейти к товару</span>
 							<span class="header__bottom-button_arrow"></span>
 						</button>
@@ -164,7 +164,7 @@
 		<section class="gallery section" data-section="gallery">
 			<div class="container">
 				<div class="row">
-					<div class="gallery__title">ВЫГОДНОЕ ПРЕДЛОЖЕНИЕ</div>
+					<div class="gallery__title" data-section="gallery">ВЫГОДНОЕ ПРЕДЛОЖЕНИЕ</div>
 					<div class="gallery__text">Прочные и удобные ботинки ECCO BIOM TERRAIN WINTER со скидкой в -50%</div>
 					<div class="gallery__elem">
 						<div class="gallery__prev col-lg-push-1">
@@ -173,16 +173,16 @@
 							</div>
 							<ul class="gallery__prev-list">
 								<li class="gallery__prev-item">
-									<img src="public/img/catalog/01.jpg" alt="" class="gallery__prev-item_img">
+									<img src="public/img/catalog/01.jpg" alt="" class="gallery__prev-item_img" data-src='public/img/catalog/01.jpg' >
 								</li>
 								<li class="gallery__prev-item">
-									<img src="public/img/catalog/02.jpg" alt="" class="gallery__prev-item_img">
+									<img src="public/img/catalog/02.jpg" alt="" class="gallery__prev-item_img" data-src='public/img/catalog/02.jpg' >
 								</li>
 								<li class="gallery__prev-item">
-									<img src="public/img/catalog/03.jpg" alt="" class="gallery__prev-item_img">
+									<img src="public/img/catalog/03.jpg" alt="" class="gallery__prev-item_img" data-src='public/img/catalog/03.jpg' >
 								</li>
 								<li class="gallery__prev-item">
-									<img src="public/img/catalog/04.jpg" alt="" class="gallery__prev-item_img">
+									<img src="public/img/catalog/04.jpg" alt="" class="gallery__prev-item_img" data-src='public/img/catalog/04.jpg' >
 								</li>
 							</ul>
 						</div>
@@ -285,75 +285,51 @@
 					<div class="reviews__gallery owl-carousel owl-theme">
 						<div class="reviews__gallery-item item">
 							<div class="reviews__gallery-head">
-								<img src="public/img/review-pic.png" class="reviews__gallery-pic" />
+								<img src="public/img/alek.png" class="reviews__gallery-pic" />
 								<div class="reviews__gallery-name">
-									<p class="reviews__gallery-name_text">Степан Резин</p>
+									<p class="reviews__gallery-name_text">Алексей Епишкин</p>
 									<img src="public/img/stars.png" alt="" class="reviews__gallery-name_stars">
 								</div>
 								<div class="head__red"></div>
 							</div>
 							<div class="reviews__gallery-body">
 								<div class="reviews__gallery-body_text">
-									“Покупкой очень доволен, потому что очень трудно подобрать 
-									спортивные ботинки, которые будут прочные, удобные 
-									и приносить эстетическое наслаждение. Обувь прекрасно 
-									подошла по размеру, ее не надо разнашивать.”
+									“Покупка получилась очень хорошая, есть небольшие недочеты (их пришлось в течение дня расхаживать), но цена их полностью компенсирует. Теплые ботинки обладают достаточно неплохим качеством и уверен, что минимум 2 сезона они мне отлично прослужат.”
 								</div>
 								<div class="body__red"></div>
 							</div>
-							<ul class="reviews__gallery-dots" id="gallery-dots">
-								<li class="reviews__gallery-dots_item"></li>
-								<li class="reviews__gallery-dots_item"></li>
-								<li class="reviews__gallery-dots_item"></li>
-							</ul>
 						</div><!-- reviews gallery item --> 
 						<div class="reviews__gallery-item item">
 							<div class="reviews__gallery-head">
-								<img src="public/img/review-pic.png" class="reviews__gallery-pic" />
-								<div class="reviews__gallery-name">
-									<p class="reviews__gallery-name_text">Степан Резин</p>
-									<img src="public/img/stars.png" alt="" class="reviews__gallery-name_stars">
+								<img src="public/img/val.png" class="reviews__gallery-pic" />
+								<div class="reviews__gallery-name reviews__gallery-name_val">
+									<p class="reviews__gallery-name_text">Валентина Зубейко</p>
+									<img src="public/img/stars.png" alt="" class="reviews__gallery-name_stars stars__val">
 								</div>
 								<div class="head__red"></div>
 							</div>
 							<div class="reviews__gallery-body">
 								<div class="reviews__gallery-body_text">
-									“Покупкой очень доволен, потому что очень трудно подобрать 
-									спортивные ботинки, которые будут прочные, удобные 
-									и приносить эстетическое наслаждение. Обувь прекрасно 
-									подошла по размеру, ее не надо разнашивать.”
+									“Подарок для молодого человека получился великолепным. Выбрала ваши ботинки  благодаря внешнему виду и относительно небольшой цены. Мой муж высоко оценил их качество и практически все время в них ходит. Спасибо вам за хорошую обувь и быструю доставку!”
 								</div>
 								<div class="body__red"></div>
 							</div>
-							<ul class="reviews__gallery-dots" id="gallery-dots">
-								<li class="reviews__gallery-dots_item"></li>
-								<li class="reviews__gallery-dots_item"></li>
-								<li class="reviews__gallery-dots_item"></li>
-							</ul>
 						</div><!-- reviews gallery item --> 
 						<div class="reviews__gallery-item item">
 							<div class="reviews__gallery-head">
-								<img src="public/img/review-pic.png" class="reviews__gallery-pic" />
-								<div class="reviews__gallery-name">
-									<p class="reviews__gallery-name_text">Степан Резин</p>
-									<img src="public/img/stars.png" alt="" class="reviews__gallery-name_stars">
+								<img src="public/img/oleg.png" class="reviews__gallery-pic" />
+								<div class="reviews__gallery-name reviews__gallery-name_oleg">
+									<p class="reviews__gallery-name_text">Олег Пензер</p>
+									<img src="public/img/stars.png" alt="" class="reviews__gallery-name_stars stars__oleg">
 								</div>
 								<div class="head__red"></div>
 							</div>
 							<div class="reviews__gallery-body">
 								<div class="reviews__gallery-body_text">
-									“Покупкой очень доволен, потому что очень трудно подобрать 
-									спортивные ботинки, которые будут прочные, удобные 
-									и приносить эстетическое наслаждение. Обувь прекрасно 
-									подошла по размеру, ее не надо разнашивать.”
+									“Красивые, теплые и прочные ботинки. Работаю в основном на открытом воздухе, поэтому ощущаю сильную зависимость от погодных условий. Уверен, эти ботинки надежно меня защитят зимой, плюс на цена более чем адекватная. Стоит покупать не задумываясь!”
 								</div>
 								<div class="body__red"></div>
 							</div>
-							<ul class="reviews__gallery-dots" id="gallery-dots">
-								<li class="reviews__gallery-dots_item"></li>
-								<li class="reviews__gallery-dots_item"></li>
-								<li class="reviews__gallery-dots_item"></li>
-							</ul>
 						</div><!-- reviews gallery item --> 
 					</div><!-- reviews gallery -->
 				</div>
@@ -402,7 +378,7 @@
 									  </ul>
 									</div>
 								</div><!-- wrap for counter -->
-								<button class="header__bottom-button" type="submit">
+								<button class="header__bottom-button" data-gallery="gallery" type="submit">
 									<span class="header__bottom-button_text">Перейти к товару</span>
 									<span class="header__bottom-button_arrow"></span>
 								</button>
@@ -430,7 +406,7 @@
 	<script src="public/js/jquery.lwtCountdown-1.0.js"></script>
 	<script src="public/js/jquery_003.js"></script>
 	<script src="public/js/jquery_002.js"></script>
-	<!-- <script src="public/js/bootstrap.min.js"></script> -->
+	<script src="public/js/jquery.fancybox.js"></script>
 	<script src="public/js/owl.carousel.min.js"></script>
 	<script src="public/js/main.min.js"></script>
 </body>

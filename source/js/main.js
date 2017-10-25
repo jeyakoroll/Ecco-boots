@@ -5,12 +5,13 @@ $(document).ready(function () {
       loop:true,
       margin: 70,
       items: 1,
+      // autoplay: true,
       center: true,
       dots: true,
       nav: false,
       autoWidth: true,
       // navContainer: '',
-      dotsContainer: '#gallery-dots',
+      // dotsContainer: '.reviews__gallery-dots',
       responsiveClass:true
       // responsive:{
       //     0:{
@@ -42,6 +43,20 @@ $(document).ready(function () {
       // }
   });
 
+  // switching images in gallery area
+  $( '.gallery__prev-item' ).on('click', slideHandler );
+  // $( '.gallery__preview-item' ).bind( "tap", slideHandler );
+
+  function slideHandler (e) {
+      var target = $(e.target);
+      if (target.hasClass('gallery__prev-item_img')) {
+          var img = target.closest('.gallery__prev').find('.gallery__prev-pic_img');
+          var src = target.data('src');
+          img.attr('src', src).hide().fadeIn(200);
+              console.log(img);
+      }
+  }
+
   // timer
   (function() {
     $(document).ready(function() {
@@ -58,7 +73,33 @@ $(document).ready(function () {
     });
   })();
 
+// show gallery
 
+  $('.header__bottom-button').on('click', showGallery);
+
+  function showGallery (e) {
+      e.preventDefault();
+      sectionGallery($(this).data('gallery'), true);
+  }
+
+  function sectionGallery(section, isAnimate) {
+      var 
+          reqSection = $('.gallery__title').filter('[data-section="' + section +'"]'),
+          widthMobile = window.screen.width < 768,
+          widthScreen = window.screen.width > 768,
+          reqSectionPos = reqSection.offset().top + 60,
+          reqSectionPosMob = reqSection.offset().top - 36;
+
+
+
+      if (isAnimate && widthMobile) {
+        $('body, html').animate({scrollTop: reqSectionPosMob}, 350);
+      } else if (isAnimate && widthScreen) {
+        $('body, html').animate({scrollTop: reqSectionPos}, 350);
+      }
+  }
+
+// sticky menu
   $('.header__nav-link').on('click', function(e) {
     e.preventDefault();
 
@@ -79,7 +120,7 @@ $(window).scroll(function() {
         reqSection = $('.section').filter('[data-section="' + direction + '"]'),
         reqSectionPos = reqSection.offset().top - 30;
         if (isAnimate) {
-          $('body, html').animate({scrollTop: reqSectionPos}, 500);
+          $('body, html').animate({scrollTop: reqSectionPos}, 400);
         } else {
           $('body, html').scrollTop(reqSectionPos);
         }
