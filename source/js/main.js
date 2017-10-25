@@ -1,5 +1,47 @@
 $(document).ready(function () {
 
+// $('.owl-carousel').owlCarousel();
+  $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin: 70,
+      items: 1,
+      center: true,
+      dots: true,
+      nav: false,
+      autoWidth: true,
+      // navContainer: '',
+      dotsContainer: '#gallery-dots',
+      responsiveClass:true
+      // responsive:{
+      //     0:{
+      //         items: 1,
+      //         margin: 50,
+      //         loop: true,
+      //         autoWidth: true,
+      //         autoplay: true,
+      //         center: true,
+      //         dots: false
+      //     },
+      //     500:{
+      //         items:1,
+      //         loop: true,
+      //         autoWidth: true,
+      //         margin: 50,
+      //         center: true,
+      //         autoplay: false,
+      //         dots: false
+      //     },
+      //     768:{
+      //         items:1,
+      //         loop:true,
+      //         autoWidth: true,
+      //         center: true,
+      //         // autoWidth: false,
+      //         dots: true
+      //     }
+      // }
+  });
+
   // timer
   (function() {
     $(document).ready(function() {
@@ -16,5 +58,49 @@ $(document).ready(function () {
     });
   })();
 
+
+  $('.header__nav-link').on('click', function(e) {
+    e.preventDefault();
+
+    showSection($(this).attr('href'), true); 
+  });
+
+  showSection(window.location.hash, false);
+
 })
 
+$(window).scroll(function() {
+  checkSection();
+});
+
+  function showSection(section, isAnimate) {
+    var 
+        direction = section.replace(/#/, ''),
+        reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+        reqSectionPos = reqSection.offset().top - 30;
+        if (isAnimate) {
+          $('body, html').animate({scrollTop: reqSectionPos}, 500);
+        } else {
+          $('body, html').scrollTop(reqSectionPos);
+        }
+  }
+
+function checkSection() {
+  $('.section').each((function() {
+    var 
+        that = $(this),
+        topEdge = that.offset().top,
+        bottomEdge = topEdge + that.height(),
+        wScroll = $(window).scrollTop();
+
+        if (topEdge < wScroll && bottomEdge > wScroll ) {
+          var
+              currentId = that.data('section'),
+              reqLink = $('.header__link').filter('[href="#' + currentId + '"]');
+
+          reqLink.closest('.header__item').addClass('active__tab').siblings().removeClass('active__tab');
+
+          window.location.hash = currentId;
+        }
+  }));
+}

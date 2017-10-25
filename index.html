@@ -13,6 +13,8 @@
 	<link rel="stylesheet" href="public/css/normalize.css">
 	<link rel="stylesheet" href="public/css/fonts.css">
 	<link rel="stylesheet" href="public/css/bootstrap.min.css">
+	<link rel="stylesheet" href="public/css/owl.carousel.min.css">
+	<!-- <link rel="stylesheet" href="public/css/owl.theme.default.min.css"> -->
 	<link rel="stylesheet" href="public/css/all.min.css">
 </head>
 <body class="body">
@@ -29,11 +31,11 @@
 						</div>
 						<nav class="header__nav col-lg-push-4 col-md-push-3 col-lg-7 col-md-8 col-sm-10">
 							<ul class="header__nav-list">
-								<li class="header__nav-item"><a href="#" class="header__nav-link">Преимущества</a></li>
-								<li class="header__nav-item"><a href="#" class="header__nav-link">Видео</a></li>
-								<li class="header__nav-item"><a href="#" class="header__nav-link">Каталог</a></li>
-								<li class="header__nav-item"><a href="#" class="header__nav-link">Доставка</a></li>
-								<li class="header__nav-item"><a href="#" class="header__nav-link">Отзывы</a></li>
+								<li class="header__nav-item"><a href="#about" class="header__nav-link">Преимущества</a></li>
+								<li class="header__nav-item"><a href="#video" class="header__nav-link">Видео</a></li>
+								<li class="header__nav-item"><a href="#gallery" class="header__nav-link">Каталог</a></li>
+								<li class="header__nav-item"><a href="#work" class="header__nav-link">Доставка</a></li>
+								<li class="header__nav-item"><a href="#reviews" class="header__nav-link">Отзывы</a></li>
 							</ul>
 						</nav>
 					</div><!-- header top -->
@@ -94,7 +96,7 @@
 			
 		</header>
 		<!-- about Site -->
-		<section class="about">
+		<section class="about section" data-section="about">
 			<img src="public/img/about-back.jpg" alt="" class="about__back">
 			<div class="container">
 				<div class="row">
@@ -138,7 +140,7 @@
 			</div>
 		</section>
 		<!-- Site video -->
-		<section class="video">
+		<section class="video section" data-section="video">
 			<div class="container">
 				<div class="row">
 					<h3 class="video__title">
@@ -159,7 +161,7 @@
 			</div>
 		</section>
 		<!-- Site gallery -->
-		<section class="gallery">
+		<section class="gallery section" data-section="gallery">
 			<div class="container">
 				<div class="row">
 					<div class="gallery__title">ВЫГОДНОЕ ПРЕДЛОЖЕНИЕ</div>
@@ -225,7 +227,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="work">
+		<section class="work section" data-section="work">
 			<div class="work__title">Как мы работаем</div>
 			<p class="work__text-top">
 				Доставка осуществляется сервисами Новая почта и Укрпочта в течении 2-3х дней. 
@@ -275,10 +277,85 @@
 			</p>
 		</section>
 		<!-- Site reviews -->
-		<section class="reviews">
+		<section class="reviews section" data-section="reviews">
 			<div class="container">
 				<div class="row">
-					
+					<p class="reviews__title">Отзывы наших покупателей</p>
+					<!-- owl-carousel owl-theme -->
+					<div class="reviews__gallery owl-carousel owl-theme">
+						<div class="reviews__gallery-item item">
+							<div class="reviews__gallery-head">
+								<img src="public/img/review-pic.png" class="reviews__gallery-pic" />
+								<div class="reviews__gallery-name">
+									<p class="reviews__gallery-name_text">Степан Резин</p>
+									<img src="public/img/stars.png" alt="" class="reviews__gallery-name_stars">
+								</div>
+								<div class="head__red"></div>
+							</div>
+							<div class="reviews__gallery-body">
+								<div class="reviews__gallery-body_text">
+									“Покупкой очень доволен, потому что очень трудно подобрать 
+									спортивные ботинки, которые будут прочные, удобные 
+									и приносить эстетическое наслаждение. Обувь прекрасно 
+									подошла по размеру, ее не надо разнашивать.”
+								</div>
+								<div class="body__red"></div>
+							</div>
+							<ul class="reviews__gallery-dots" id="gallery-dots">
+								<li class="reviews__gallery-dots_item"></li>
+								<li class="reviews__gallery-dots_item"></li>
+								<li class="reviews__gallery-dots_item"></li>
+							</ul>
+						</div><!-- reviews gallery item --> 
+						<div class="reviews__gallery-item item">
+							<div class="reviews__gallery-head">
+								<img src="public/img/review-pic.png" class="reviews__gallery-pic" />
+								<div class="reviews__gallery-name">
+									<p class="reviews__gallery-name_text">Степан Резин</p>
+									<img src="public/img/stars.png" alt="" class="reviews__gallery-name_stars">
+								</div>
+								<div class="head__red"></div>
+							</div>
+							<div class="reviews__gallery-body">
+								<div class="reviews__gallery-body_text">
+									“Покупкой очень доволен, потому что очень трудно подобрать 
+									спортивные ботинки, которые будут прочные, удобные 
+									и приносить эстетическое наслаждение. Обувь прекрасно 
+									подошла по размеру, ее не надо разнашивать.”
+								</div>
+								<div class="body__red"></div>
+							</div>
+							<ul class="reviews__gallery-dots" id="gallery-dots">
+								<li class="reviews__gallery-dots_item"></li>
+								<li class="reviews__gallery-dots_item"></li>
+								<li class="reviews__gallery-dots_item"></li>
+							</ul>
+						</div><!-- reviews gallery item --> 
+						<div class="reviews__gallery-item item">
+							<div class="reviews__gallery-head">
+								<img src="public/img/review-pic.png" class="reviews__gallery-pic" />
+								<div class="reviews__gallery-name">
+									<p class="reviews__gallery-name_text">Степан Резин</p>
+									<img src="public/img/stars.png" alt="" class="reviews__gallery-name_stars">
+								</div>
+								<div class="head__red"></div>
+							</div>
+							<div class="reviews__gallery-body">
+								<div class="reviews__gallery-body_text">
+									“Покупкой очень доволен, потому что очень трудно подобрать 
+									спортивные ботинки, которые будут прочные, удобные 
+									и приносить эстетическое наслаждение. Обувь прекрасно 
+									подошла по размеру, ее не надо разнашивать.”
+								</div>
+								<div class="body__red"></div>
+							</div>
+							<ul class="reviews__gallery-dots" id="gallery-dots">
+								<li class="reviews__gallery-dots_item"></li>
+								<li class="reviews__gallery-dots_item"></li>
+								<li class="reviews__gallery-dots_item"></li>
+							</ul>
+						</div><!-- reviews gallery item --> 
+					</div><!-- reviews gallery -->
 				</div>
 			</div>
 		</section>
@@ -286,7 +363,52 @@
 		<section class="reminder">
 			<div class="container">
 				<div class="row">
-					
+						<h1 class="header__bottom-title">
+							Ботинки INFINITY BLACK – заслуженный <br class="br__mobile"> лидер <br class="br">
+							2017 года!
+						</h1>
+						<p class="header__bottom-mobile_discount">со скидкой в -50%</p>
+						<div class="header__bottom-elem">
+							<div class="header__bottom-pic col-lg-5 col-lg-push-5 col-md-push-5">
+								<img src="public/img/header-pic.png" alt="" class="header__bottom-pic_elem">
+							</div>
+							<div class="header__bottom-counter col-lg-4 col-lg-pull-7 col-md-pull-7 col-md-4">
+								<div class="header__bottom-counter_wrap">
+									<h2 class="header__bottom-counter_title">
+										Покупайте мужские ботинки <br class="br">
+										ECCO INFINITY BLACK
+									</h2>
+									<p class="header__bottom-counter_discount">со скидкой в -50%</p>
+									<p class="header__bottom-counter_text">До конца акции осталось:</p>
+									<div class="banner-info__item center-block">
+									  <ul class="timer flex flex-center">
+									    <li>
+									      <div><span>2</span></div>
+									      <div><span>8</span></div>
+									    </li>
+									    <li>
+									      <div><span>2</span></div>
+									      <div><span>8</span></div>
+									    </li>
+									    <li>
+									      <div><span>2</span></div>
+									      <div><span>8</span></div>
+									    </li>
+									  </ul>
+									  <ul class="time-name flex flex-center">
+									    <li>Часов</li>
+									    <li>Минут</li>
+									    <li>Секунд</li>
+									  </ul>
+									</div>
+								</div><!-- wrap for counter -->
+								<button class="header__bottom-button" type="submit">
+									<span class="header__bottom-button_text">Перейти к товару</span>
+									<span class="header__bottom-button_arrow"></span>
+								</button>
+							</div><!-- counter -->
+						</div><!-- bottom elem under title -->
+
 				</div>
 			</div>
 		</section>
@@ -308,7 +430,8 @@
 	<script src="public/js/jquery.lwtCountdown-1.0.js"></script>
 	<script src="public/js/jquery_003.js"></script>
 	<script src="public/js/jquery_002.js"></script>
-	<script src="public/js/bootstrap.min.js"></script>
+	<!-- <script src="public/js/bootstrap.min.js"></script> -->
+	<script src="public/js/owl.carousel.min.js"></script>
 	<script src="public/js/main.min.js"></script>
 </body>
 </html>
