@@ -214,10 +214,10 @@
 									<span class="new__price">новая цена  1190 грн.</span> 
 								</li>
 								<li class="gallery__descr-item_button">
-									<a href="" class="gallery__descr-item_buy">
+									<a href="" class="gallery__descr-item_buy" data-toggle="modal" data-target="#modal-order">
 										<span class="buy__text">Оформить заказ</span>
 									</a>
-									<a href="" class="gallery__descr-item_size">	
+									<a href="" class="gallery__descr-item_size" data-toggle="modal" data-target="#modal-size">	
 										<span class="buy__size">Размерная таблица</span>
 									</a>
 								</li>
@@ -401,12 +401,57 @@
 			</div>
 		</div>
 	</footer>
+
+	<!-- modal buy popup -->
+	<div class="modal" tabindex="-1" role="dialog" id="modal-order">
+	  <div class="modal-dialog modal-sm" role="document">
+	    <div class="modal-content form__content">
+		    <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	      </div>
+	      <div class="modal-body padding__bottom">
+		      <div class="modal-body form__buy-popup">
+		      	<p class="form__title-popup">Оформить заказ</p>
+						
+						<form class="order-form" action="" method="POST" accepted-charset="utf-8">
+		         <input type="hidden" name="country" value="name="country" ">
+		         <input type="hidden" name="key" value="key">
+		         	<div class="form-group">
+								<input type="text" class="form-control" name="name_first" id="name_first" required>
+							</div>
+		         <div class="form-group">
+								<input type="text" class="form-control" name="name_last" id="name_last" required>
+							</div>
+							<div class="form-group">
+								<button type="submit" name="submit">Заказать</button>
+							</div>
+						</form>
+
+		      </div>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+	<!-- modal size for shoes -->
+	<div class="modal" tabindex="-1" role="dialog" id="modal-size">
+	  <div class="modal-dialog modal-sm" role="document">
+	    <div class="modal-content size__modal">
+	    	<div class="modal-header">
+	        <button type="button" class="close close_size" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	      </div>
+	      <div class="modal-body size__modal-body">
+	      
+	      </div>
+	    </div>
+	  </div>
+	</div>
 	<!-- JS -->
 	<script src="public/js/jquery.min.js"></script>
+	<script src="public/js/bootstrap.min.js"></script>
 	<script src="public/js/jquery.lwtCountdown-1.0.js"></script>
 	<script src="public/js/jquery_003.js"></script>
 	<script src="public/js/jquery_002.js"></script>
-	<script src="public/js/jquery.fancybox.js"></script>
 	<script src="public/js/owl.carousel.min.js"></script>
 	<script src="public/js/main.min.js"></script>
 </body>

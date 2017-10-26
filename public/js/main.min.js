@@ -9,38 +9,7 @@ $(document).ready(function () {
       center: true,
       dots: true,
       nav: false,
-      autoWidth: true,
-      // navContainer: '',
-      // dotsContainer: '.reviews__gallery-dots',
-      responsiveClass:true
-      // responsive:{
-      //     0:{
-      //         items: 1,
-      //         margin: 50,
-      //         loop: true,
-      //         autoWidth: true,
-      //         autoplay: true,
-      //         center: true,
-      //         dots: false
-      //     },
-      //     500:{
-      //         items:1,
-      //         loop: true,
-      //         autoWidth: true,
-      //         margin: 50,
-      //         center: true,
-      //         autoplay: false,
-      //         dots: false
-      //     },
-      //     768:{
-      //         items:1,
-      //         loop:true,
-      //         autoWidth: true,
-      //         center: true,
-      //         // autoWidth: false,
-      //         dots: true
-      //     }
-      // }
+      autoWidth: true
   });
 
   // switching images in gallery area
@@ -56,6 +25,19 @@ $(document).ready(function () {
               console.log(img);
       }
   }
+
+  // popup form
+  $( '.form__buy-popup input[name=name_last]' ).closest( '.form-group' ).after(
+        '<div class="form-group"><select class="form-control" required name="size"><option selected="selected" value="" class="option" style="background-color: transparent; color: #9a9a9a;">Размер</option><option value="xs" class="option" style="background-color: transparent;">40</option><option value="x" class="option" style="background-color: transparent;">41</option><option value="red" class="option" style="background-color: transparent;">42</option><option value="grey" class="option" style="background-color: transparent;">43</option><option value="grey" class="option" style="background-color: transparent;">44</option><option value="grey" class="option" style="background-color: transparent;">45</option></select></div>'
+    );
+
+    $( '.form__buy-popup select[name=size]' ).addClass( 'footer__form-size' );
+    $( '.form__buy-popup .order-form' ).addClass( 'footer__form-order' );
+    $( '.form__buy-popup input' ).addClass( 'footer__form-data' );
+    $( '.form__buy-popup button' ).addClass( 'footer__form-button' );
+    $( '.form__buy-popup select[name=size]' ).addClass( 'footer__form-select' );
+    $('.form__buy-popup input[name=name_first]').attr("placeholder","Имя");
+    $('.form__buy-popup input[name=name_last]').attr("placeholder","Телефон");
 
   // timer
   (function() {
@@ -74,7 +56,6 @@ $(document).ready(function () {
   })();
 
 // show gallery
-
   $('.header__bottom-button').on('click', showGallery);
 
   function showGallery (e) {
@@ -85,19 +66,16 @@ $(document).ready(function () {
   function sectionGallery(section, isAnimate) {
       var 
           reqSection = $('.gallery__title').filter('[data-section="' + section +'"]'),
-          widthMobile = window.screen.width < 768,
-          widthScreen = window.screen.width > 768,
-          reqSectionPos = reqSection.offset().top + 60,
-          reqSectionPosMob = reqSection.offset().top - 36;
+          // widthMobile = window.screen.width < 768,
+          // widthScreen = window.screen.width > 768,
+          reqSectionPos = reqSection.offset().top;
+          // reqSectionPosMob = reqSection.offset().top - 36;
 
-
-
-      if (isAnimate && widthMobile) {
-        $('body, html').animate({scrollTop: reqSectionPosMob}, 350);
-      } else if (isAnimate && widthScreen) {
+      if (isAnimate) {
         $('body, html').animate({scrollTop: reqSectionPos}, 350);
       }
   }
+
 
 // sticky menu
   $('.header__nav-link').on('click', function(e) {

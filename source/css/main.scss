@@ -616,7 +616,8 @@ p {
 	position: relative;
 	padding-top: 75px;
 	@include desktop {
-		min-height: auto;
+		min-height: 0;
+		height: auto;
 	}
 	@include laptop {
 		padding-top: 50px;
@@ -770,7 +771,8 @@ p {
 	background: url('../img/video-back.jpg') no-repeat center top/cover;
 	padding-top: 48px;
 	@include desktop {
-		min-height: auto;
+		min-height: 0;
+		height: auto;
 		padding: 50px 0 75px;
 	}
 	@include laptop {
@@ -863,7 +865,7 @@ p {
 		padding: 40px 0 50px;
 	}
 	@include phones {
-		min-height: auto;
+		min-height: 0;
 		height: auto;
 		padding: 40px 0 40px;
 	}
@@ -1294,7 +1296,8 @@ p {
 	background: url('../img/reviews-back.jpg') no-repeat center top/cover;
 	padding-top: 85px;
 	@include tablets {
-		min-height: auto;
+		min-height: 0;
+		height: auto;
 		padding-top: 25px;
 		padding-bottom: 40px;
 	}
@@ -1500,7 +1503,8 @@ p {
 	min-height: 680px;
 	background: url('../img/reminder-back.jpg') no-repeat center top/cover;
 	@include phones {
-		min-height: auto;
+		min-height: 0;
+		height: auto;
 		padding-bottom: 35px;
 	}
 	& .header__bottom-counter {
@@ -1513,9 +1517,6 @@ p {
 		}
 	}
 }
-
-
-
 
 .empty {
 	height: 60px;
@@ -1561,6 +1562,142 @@ p {
 		float: none;
 	}
 }
+
+// modal form
+.form__buy-popup {
+	@include phones {
+		padding: 15px 0 0 0;
+	}
+}
+
+.padding__bottom {
+	@include phones {
+		padding-bottom: 0 !important;
+	}
+}
+
+.form__title-popup {
+	text-align: center;
+	@include roboto(pt);
+	font-size: 29px;
+	width: 120%;
+  margin-left: -10%;
+  margin-top: -20%;
+	color: #222;
+	@include phones {
+		font-size: 24px;
+	}
+}
+
+.modal-content {
+	box-shadow: 0 0 0 0;
+	background-color: #f3f0ee;
+	border-radius: 0;
+	min-height: 300px;
+	@include tablets {
+		margin: 0 auto;
+	}
+	@include phones {
+		min-height: auto;
+	}
+}
+
+.form__content {
+	@include tablets {
+		max-width: 300px;
+		margin: 0 auto;
+	}
+	@include phones {
+		width: 270px;
+	}
+}
+
+.modal-header {
+	border-bottom: 0 none;
+	margin-bottom: 10px;
+	@include phones {
+		margin-bottom: -8px;
+	}
+}
+
+.modal-body {
+	padding: 15px 19px;
+}
+
+.form-control {
+	border-radius: 0;
+	height: 27px;
+	width: 224px;
+	font-size: 14px;
+	padding: 0 12px;
+	border: 1px solid #aab2b7;
+	@include phones {
+		width: 100%;
+	}
+}
+
+.form__title-popup {
+	margin-bottom: 28px;
+	@include phones {
+		margin-bottom: 16px;
+	}
+}
+
+.footer__form-button {
+	background-color: #ff4343;
+	width: 224px;
+	height: 38px;
+	margin: 0 auto;
+	border: 0 none;
+	font-size: 14px;
+	color: #fff;
+	border-radius: 5px;
+	margin-top: 15px;
+	@include phones {
+		width: 100%;
+		margin-top: 8px;
+	}
+}
+
+// modal size
+.size__modal {
+	width: 319px;
+	height: 413px;
+	position: relative;
+	min-width: 300px;
+	@include phones {
+		width: 250px;
+		min-width: 0;
+		height: 324px;
+	}
+}
+
+.modal {
+	@include phones {
+		padding-right: 0 !important;
+	}
+}
+
+.size__modal-body {
+	@include absolute-center;
+	max-width: 99%;
+	max-height: 99%;
+	background: url('../img/table-size.jpg') no-repeat;
+	@include phones {
+		background: url('../img/table-size-mob.jpg') no-repeat;
+	}
+}
+
+.modal-header .close {
+	margin-top: -2px;
+  width: 20px;
+  height: 20px;
+  z-index: 3;
+  position: absolute;
+  top: 2px;
+  right: 1px;
+}
+
 
 // style for responsive
 .br {
