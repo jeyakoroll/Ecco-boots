@@ -385,6 +385,13 @@ p {
   }
 }
 
+@media screen and (max-width: 330px) {
+  .header__bottom-counter_wrap {
+    width: 220px;
+    height: 105px;
+  }
+}
+
 .header__bottom-counter_title {
   color: #fff;
   text-align: center;
@@ -443,6 +450,12 @@ p {
   }
 }
 
+@media screen and (max-width: 330px) {
+  .header__bottom-counter_text {
+    margin: 3px 0 5px 15px;
+  }
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -471,6 +484,12 @@ p {
   }
 }
 
+@media screen and (max-width: 330) {
+  .banner-info__item {
+    max-width: 22rem;
+  }
+}
+
 .timer,
 .time-name {
   float: right;
@@ -485,6 +504,13 @@ p {
   .timer,
   .time-name {
     max-width: 25rem;
+  }
+}
+
+@media screen and (max-width: 330) {
+  .timer,
+  .time-name {
+    max-width: 22rem;
   }
 }
 
@@ -508,6 +534,13 @@ p {
   .timer li,
   .time-name li {
     width: 62px;
+  }
+}
+
+@media screen and (max-width: 330) {
+  .timer li,
+  .time-name li {
+    width: 48px;
   }
 }
 
@@ -537,10 +570,27 @@ p {
   }
 }
 
+@media screen and (max-width: 330px) {
+  .timer li div,
+  .time-name li div {
+    width: 25px;
+    height: 4.3rem;
+    line-height: 1.4rem;
+    font-size: 2.7rem;
+  }
+}
+
 .timer li div span,
 .time-name li div span {
   position: relative;
   top: 1.6875rem;
+}
+
+@media screen and (max-width: 330px) {
+  .timer li div span,
+  .time-name li div span {
+    top: 1.2rem;
+  }
 }
 
 .time-name {
@@ -584,6 +634,12 @@ p {
 @media screen and (max-width: 400px) {
   .header__bottom-button {
     margin-left: 17%;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .header__bottom-button {
+    margin-left: 18%;
   }
 }
 
@@ -1918,6 +1974,13 @@ p {
   }
 }
 
+@media screen and (max-width: 330px) {
+  .reminder .header__bottom-counter {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
 .empty {
   height: 60px;
 }
@@ -2113,7 +2176,7 @@ p {
 
 .size__modal {
   width: 319px;
-  height: 413px;
+  height: 337px;
   position: relative;
   min-width: 300px;
 }
@@ -2122,7 +2185,7 @@ p {
   .size__modal {
     width: 250px;
     min-width: 0;
-    height: 324px;
+    height: 264px;
   }
 }
 
